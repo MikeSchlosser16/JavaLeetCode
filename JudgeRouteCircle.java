@@ -28,9 +28,6 @@ class Solution {
                 default: break;
             }
         }
-        System.out.println(U);
-        System.out.println(D);
-
         return ( (U == D) && (L == R) );
     }
 }

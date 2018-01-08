@@ -40,6 +40,7 @@ class Solution {
 
 // A O(nlogn) solution. This is much cleaner and better. 
 // If we sort, the majority must be the middle element. So just use that
+// Sorting array is O(nlogn)
 class Solution {
     public int majorityElement(int[] nums) {
         Arrays.sort(nums);

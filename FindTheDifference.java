@@ -16,6 +16,7 @@ class Solution {
 
 
 //Smart solution, difference must be the the char
+// Remeber chars have Int ascii values! Makes this simple problem
 public class Solution {
     public char findTheDifference(String s, String t) {
         // Initialize variables to store sum of ASCII codes for each string
@@ -25,5 +26,18 @@ public class Solution {
         for (int i = 0; i < t.length(); ++i) charCodeT += (int)t.charAt(i);
         // Return the difference between 2 strings as char
         return (char)(charCodeT - charCodeS);
+    }
+}
+
+// Even better, we can use one loop with a single sum since T value must be > S
+public class Solution { 
+   public char findTheDifference(String s, String t) {
+        int charCode = t.charAt(s.length());
+        // Iterate through both strings and char codes
+        for (int i = 0; i < s.length(); ++i) {
+              charCode -= (int)s.charAt(i);
+              charCode += (int)t.charAt(i); 
+        }
+        return (char)charCode;
     }
 }

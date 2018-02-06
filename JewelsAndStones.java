@@ -23,11 +23,12 @@ class Solution {
 // This class implements the Set interface, backed by a hash table (actually a HashMap instance)
 // This class offers constant time performance for the basic operations (add, remove, contains and size), assuming the hash function disperses the elements properly among the buckets. Iterating over this set requires time proportional to the sum of the HashSet instance's size (the number of elements) plus the "capacity" of the backing HashMap instance (the number of buckets). Thus, it's very important not to set the initial capacity too high (or the load factor too low) if iteration performance is important.
 // https://docs.oracle.com/javase/7/docs/api/java/util/HashSet.html
+// Set only allows items once
 class Solution {
     public int numJewelsInStones(String J, String S) {
         Set<Character> set = new HashSet<>();
         for (Character c: J.toCharArray()) {
-            set.add(c);
+            set.add(c); // Only add once, set no duplicates
         }
         int count = 0;
         for (Character c: S.toCharArray()) {

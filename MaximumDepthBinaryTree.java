@@ -8,7 +8,7 @@
  * }
  */
 
- // O(n), go over each node once 
+ // O(n), go over each node once
 class Solution {
     public int maxDepth(TreeNode root) {
         if(root == null) return 0;
@@ -21,4 +21,11 @@ class Solution {
 
         return(Math.max(dr,dl) + 1);
     }
+}
+
+
+// Cleaner
+public int maxDepth(TreeNode root) {
+    if (root == null) return 0;
+    return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
 }

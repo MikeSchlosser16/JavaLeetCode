@@ -32,6 +32,7 @@ class Solution {
 
 // Bonus
 // If log10(n) / log10(3) returns an int (more precisely, a double but has 0 after decimal point), then n is a power of 3.
+// if n = 3^i, then i = log(n) / log(3), and thus comes to the solution
 public boolean isPowerOfThree(int n) {
     return (Math.log10(n) / Math.log10(3)) % 1 == 0;
 }

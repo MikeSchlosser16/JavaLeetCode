@@ -21,3 +21,33 @@ class Solution {
         return max;
     }
 }
+
+
+
+// Brute force, checking all sub arrays
+public static int maxSubArray(int[] nums) {
+    int ans = Integer.MIN_VALUE;
+    for(int sub_array_size = 1; sub_array_size <= nums.length; sub_array_size++){
+        System.out.println("Summing for size: " + sub_array_size + " elements");
+        for(int start_index = 0; start_index < nums.length; start_index++){
+
+            if(start_index + sub_array_size > nums.length){
+                System.out.println("    Not enough size left to make array valid for: " + start_index);
+                break;
+            }else{
+                System.out.println("    Starting at index:" + start_index);
+            }
+            int sum = 0;
+
+            for(int i = start_index; i < sub_array_size + start_index; i++){
+                sum += nums[i];
+                if(sum > ans){
+                    ans = sum;
+                }
+            }
+            System.out.println("        Sum: " + sum);
+        }
+        System.out.println("After Summing for size: " + sub_array_size + ", new max is: " + ans);
+    }
+    return ans;
+}

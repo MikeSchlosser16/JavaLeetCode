@@ -5,14 +5,18 @@ For example, given the array [-2,1,-3,4,-1,2,1,-5,4],
 the contiguous subarray [4,-1,2,1] has the largest sum = 6.
 */
 
+
+// Keep adding to sub array while sum is positiive
+// when sum of sub array falls neg, reset it and check if new max
+// called Kadanes algorithm
 class Solution {
     public int maxSubArray(int[] nums) {
         int max = Integer.MIN_VALUE;
         int sum = 0;
         for(int i = 0; i < nums.length; i++){
-            if(sum < 0) sum = nums[i];
+            if(sum < 0) sum = nums[i]; // Reset subarray
             else{
-                sum += nums[i];
+                sum += nums[i]; // Update with value, its bigger
             }
             if(sum > max){
                 max = sum;

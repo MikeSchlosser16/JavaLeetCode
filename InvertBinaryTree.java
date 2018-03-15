@@ -22,12 +22,17 @@ to
  */
 class Solution {
     public TreeNode invertTree(TreeNode root) {
-        if (root == null){
-          return null;
-        }
-        TreeNode tempRoot = new TreeNode(root.val);
-        tempRoot.left = invertTree(root.right);
-        tempRoot.right = invertTree(root.left);
-        return tempRoot;
-    }
+
+       if(root == null){
+           return root;
+       }
+
+       TreeNode temp = root.right;
+       root.right = root.left;
+       root.left = temp;
+
+       invertTree(root.right);
+       invertTree(root.left);
+
+       return root;
 }

@@ -23,13 +23,13 @@ class Solution {
             }
         }
         throw new IllegalArgumentException("No two sum solution");
-    }                    
+    }
 }
 
 
-//Using a hasmap
+//Using a hashmap
 //O(n)
-//Hash map supports look up in constant time. We are sacrificing space for speed here. 
+//Hash map supports look up in constant time. We are sacrificing space for speed here.
 class Solution{
 	public int[] twoSum(int[] nums, int target){
 		Map<Integer, Integer> map = new HashMap<>();
@@ -47,4 +47,3 @@ class Solution{
 		throw new IllegalArgumentException("No two sum solution");
 	}
 }
-

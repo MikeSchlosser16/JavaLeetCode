@@ -9,7 +9,7 @@ Explanation: n is 2, and the maximum sum of pairs is 4 = min(1, 2) + min(3, 4).*
 
 
 //My initial solution. O(n)
-//Sort and then just grab min of the two sorted. We want the biggest numbers to be together to get the max. 
+//Sort and then just grab min of the two sorted. We want the biggest numbers to be together to get the min. 
 class Solution {
     public int arrayPairSum(int[] nums) {
         Arrays.sort(nums);
@@ -20,5 +20,3 @@ class Solution {
         return total;
     }
 }
-
-

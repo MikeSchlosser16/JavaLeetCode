@@ -16,4 +16,6 @@ class Solution {
     }
 
 // Another approach is sorting array and then looking at i and i+1.
-// Obviously, do not want to nested loop 
+// Obviously, do not want to nested loop
+
+//Where did this go?

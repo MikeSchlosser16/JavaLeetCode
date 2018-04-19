@@ -21,7 +21,7 @@ Round 3: You could get 10 points (the round 2's data has been removed). The sum 
 Round 4: You could get 5 + 10 = 15 points. The sum is: 30.
 */
 
-// Classic stack problem, push and pop values on the stack to keep track of whats valid
+// Classic stack problem, push and pop values on the stack to keep track of whats valid. The LIFO properities should give it away
 
 class Solution {
     public int calPoints(String[] ops) {

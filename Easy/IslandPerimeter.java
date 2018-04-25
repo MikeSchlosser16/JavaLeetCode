@@ -39,8 +39,7 @@ class Solution {
 
 
 // Can also do this with Depth First search
-
-
+// https://www.hackerearth.com/practice/algorithms/graphs/depth-first-search/tutorial/
 public class Solution {
     public int islandPerimeter(int[][] grid) {
         if (grid == null) return 0;
@@ -59,7 +58,7 @@ public class Solution {
         if (grid[i][j] == 0) {
             return 1; // Edge
         }
-        if (grid[i][j] == -1) return 0; //have already visited
+        if (grid[i][j] == -1) return 0; // Have already visited
 
         int count = 0;
         grid[i][j] = -1; //have already visited
